@@ -71,7 +71,7 @@ class Fractions
     // Умножение
     public static Fractions operator *(Fractions a, Fractions b)
     {
-        long res = a.ToScaled() * b.ToScaled(); 
+        long res = a.ToScaled() * b.ToScaled();  //Ошибка, отсутствует деление на SCALE
         return FromScaled(res);
     }
 
@@ -87,7 +87,7 @@ class Fractions
     public static bool operator <(Fractions a, Fractions b) => a.ToScaled() < b.ToScaled();
     public static bool operator ==(Fractions a, Fractions b) => a.ToScaled() == b.ToScaled();
     public static bool operator !=(Fractions a, Fractions b) => !(a == b);
-
+//Ошибка, отсутствуют опраторы сравнения <= и >=
 
     public override bool Equals(object obj)
     {
